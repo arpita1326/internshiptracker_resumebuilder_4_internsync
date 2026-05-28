@@ -1,0 +1,184 @@
+<!-- templates/add_internship.html -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Add Internship | Intersync</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+          rel="stylesheet">
+
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='style.css') }}">
+
+</head>
+
+<body>
+
+<div class="form-container">
+
+    <div class="form-card">
+
+        <div class="text-center mb-4">
+
+            <i class="fa-solid fa-briefcase fa-3x text-info mb-3"></i>
+
+            <h2>Add Internship</h2>
+
+            <p class="text-secondary">
+
+                Track your internship professionally
+
+            </p>
+
+        </div>
+
+        <form method="POST">
+
+            <div class="mb-3">
+
+                <label>
+
+                    Company Name
+
+                </label>
+
+                <input type="text"
+                       name="company"
+                       placeholder="Enter company name"
+                       required>
+
+            </div>
+
+            <div class="mb-3">
+
+                <label>
+
+                    Role / Position
+
+                </label>
+
+                <input type="text"
+                       name="role"
+                       placeholder="Enter internship role"
+                       required>
+
+            </div>
+
+            <div class="mb-3">
+
+                <label>
+
+                    Application Status
+
+                </label>
+
+                <select name="status">
+
+                    <option value="Applied">
+
+                        Applied
+
+                    </option>
+
+                    <option value="Interview">
+
+                        Interview
+
+                    </option>
+
+                    <option value="Selected">
+
+                        Selected
+
+                    </option>
+
+                    <option value="Rejected">
+
+                        Rejected
+
+                    </option>
+
+                </select>
+
+            </div>
+
+            <div class="mb-3">
+
+                <label>
+
+                    Deadline
+
+                </label>
+
+                <input type="date"
+                       name="deadline"
+                       required>
+
+            </div>
+
+            <div class="mb-3">
+
+                <label>
+
+                    Application Link
+
+                </label>
+
+                <input type="url"
+                       name="link"
+                       placeholder="https://company.com/apply">
+
+            </div>
+
+            <div class="mb-4">
+
+                <label>
+
+                    Notes
+
+                </label>
+
+                <textarea name="notes"
+                          rows="4"
+                          placeholder="Write interview notes, HR details, preparation plan..."></textarea>
+
+            </div>
+
+            <button type="submit">
+
+                <i class="fa-solid fa-floppy-disk me-2"></i>
+
+                Save Internship
+
+            </button>
+
+        </form>
+
+        <a href="/"
+           class="back-link">
+
+            <i class="fa-solid fa-arrow-left me-2"></i>
+
+            Back to Dashboard
+
+        </a>
+
+    </div>
+
+</div>
+
+<script src="{{ url_for('static', filename='script.js') }}"></script>
+
+</body>
+</html>
